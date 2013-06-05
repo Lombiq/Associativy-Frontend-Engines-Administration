@@ -1,0 +1,13 @@
+﻿Name: Associativy Frontend Engines Administration
+AntiForgery: enabled
+Author: Piedone
+Website: http://associativyfrntadmin.codeplex.com
+Version: 1.0
+OrchardVersion: 1.7
+Description: Adds administrative UI to Associativy Frontend Engines.
+Features:
+    Associativy.Frontends.Administration:
+		Name: Associativy Frontend Engines Administration
+        Description: Adds administrative UI to Associativy Frontend Engines.
+		Category: Associativy
+		Dependencies: Associativy.Frontends, Associativy.Administration
