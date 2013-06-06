@@ -1,0 +1,33 @@
+﻿@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphFrontendsPart
+
+<div id="associativy-administration-graph-frontends-settings-container">
+        <fieldset>
+            <legend>@T("Frontends settings")</legend>
+            <ol>
+                <li>
+                    @Html.CheckBoxFor(m => m.GraphSettings.UseCache)
+                    <label for="@Html.FieldIdFor(m => m.GraphSettings.UseCache)" class="forcheckbox">@T("Use cache")</label>
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.GraphSettings.InitialZoomLevel, T("Initial zoom level"))
+                    @Html.TextBoxFor(m => m.GraphSettings.InitialZoomLevel, new { @class = "text text-small" })
+                    <span class="hint">@T("The zoom level the graph is initially displayed on (should be zoom level count - 1).")</span>
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.GraphSettings.ZoomLevelCount, T("Zoom level count"))
+                    @Html.TextBoxFor(m => m.GraphSettings.ZoomLevelCount, new { @class = "text text-small" })
+                    <span class="hint">@T("The number of zoom levels for the graph.")</span>
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.GraphSettings.MaxDistance, T("Maximal distance"))
+                    @Html.TextBoxFor(m => m.GraphSettings.MaxDistance, new { @class = "text text-small" })
+                    <span class="hint">@T("Maximal distance (in hops) between two nodes that should be considered in an associativy connection.")</span>
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.GraphSettings.MaxConnectionCount, T("Maximal connection count"))
+                    @Html.TextBoxFor(m => m.GraphSettings.MaxConnectionCount, new { @class = "text text-small" })
+                    <span class="hint">@T("Maximal number of connections displayed from the graph. Keep in mind that since only nodes with at least one neighbour are displayed this means that the maximal amount of displayed nodes is twice the connection count.")</span>
+                </li>
+            </ol>
+        </fieldset>
+</div>

@@ -92,10 +92,49 @@
       <Project>{a8ee4964-4880-4ee1-ac0a-75492d89bbe8}</Project>
       <Name>Associativy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Caching\Orchard.Caching.csproj">
+      <Project>{7528bf74-25c7-4abe-883a-443b4eec4776}</Project>
+      <Name>Orchard.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Roles\Orchard.Roles.csproj">
+      <Project>{d10ad48f-407d-4db5-a328-173ec7cb010f}</Project>
+      <Name>Orchard.Roles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Piedone.HelpfulLibraries\Piedone.HelpfulLibraries.csproj">
+      <Project>{ea61ad10-39d6-41a9-b12b-227f50c54158}</Project>
+      <Name>Piedone.HelpfulLibraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drivers\Pages\Admin\AssociativyManageGraphAuthorizationPartDiver.cs" />
+    <Compile Include="Drivers\Pages\Admin\AssociativyManageGraphFrontendsPartDriver.cs" />
+    <Compile Include="EventHandlers\AuthorizationAdminEventHandler.cs" />
+    <Compile Include="EventHandlers\AuthorizationFrontendEngineEventHandler.cs" />
+    <Compile Include="EventHandlers\FrontendsAdminEventHandler.cs" />
+    <Compile Include="EventHandlers\SettingsFrontendEngineEventHandler.cs" />
+    <Compile Include="Models\FrontendAuthorizationSettings.cs" />
+    <Compile Include="Models\GraphSettings.cs" />
+    <Compile Include="Models\Pages\Admin\AssociativyManageGraphAuthorizationPart.cs" />
+    <Compile Include="Models\Pages\Admin\AssociativyManageGraphFrontendsPart.cs" />
+    <Compile Include="Services\FrontendAuthorizer.cs" />
+    <Compile Include="Services\IFrontendAuthorizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DisplayTemplates\Pages\Admin\ManageGraphFrontends.Engines.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DisplayTemplates\Pages\Admin\ManageGraphAuthorization.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Placement.info">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DisplayTemplates\Pages\Admin\ManageGraphFrontends.Settings.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

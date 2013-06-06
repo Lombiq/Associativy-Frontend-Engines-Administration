@@ -1,0 +1,15 @@
+﻿@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphFrontendsPart
+@using Associativy.Frontends.Extensions
+@using Orchard.ContentManagement;
+           
+<div id="associativy-administration-frontend-engines-container">
+    <h3>@T("View graph")</h3>
+    <ul>
+    @foreach (var engine in Model.FrontendEngines)
+    {
+        <li>
+            @Html.Link(T("View with the {0} frontend engine", engine.DisplayEngineName.Text).Text, @Url.RouteEngineUrl(engine, Model.As<Associativy.Administration.Models.Pages.Admin.AssociativyManageGraphPart>().GraphDescriptor.Name))
+        </li>
+    }
+    </ul>
+</div>

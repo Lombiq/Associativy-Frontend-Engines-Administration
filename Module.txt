@@ -11,3 +11,8 @@ Features:
         Description: Adds administrative UI to Associativy Frontend Engines.
 		Category: Associativy
 		Dependencies: Associativy.Frontends, Associativy.Administration
+	Associativy.Frontends.Administration.Authorization:
+		Name: Associativy Frontend Authorization Administration
+        Description: Administrate who can view graphs with the frontend engines
+		Category: Associativy
+		Dependencies: Associativy.Frontends.Administration, Orchard.Roles
