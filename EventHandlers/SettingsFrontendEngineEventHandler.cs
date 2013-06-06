@@ -1,10 +1,8 @@
-﻿using Associativy.Frontends.Administration.Services;
-using Associativy.Frontends;
+﻿using Associativy.Administration.Services;
 using Associativy.Frontends.Models;
 using Associativy.Services;
 using Orchard.ContentManagement;
 using Piedone.HelpfulLibraries.Contents.DynamicPages;
-using Associativy.Administration.Services;
 
 namespace Associativy.Frontends.Administration.EventHandlers
 {
