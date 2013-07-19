@@ -12,7 +12,7 @@ namespace Associativy.Frontends.Administration.Models
 
         public GraphSettings()
         {
-            UseCache = false;
+            UseCache = true;
             InitialZoomLevel = 0;
             ZoomLevelCount = 10;
             MaxDistance = Associativy.Models.Services.MindSettings.Default.MaxDistance;
