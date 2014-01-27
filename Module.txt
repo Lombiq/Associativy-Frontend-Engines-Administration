@@ -3,7 +3,7 @@ AntiForgery: enabled
 Author: Piedone
 Website: http://associativyfrntadmin.codeplex.com
 Version: 1.0
-OrchardVersion: 1.7
+OrchardVersion: 1.8
 Description: Adds administrative UI to Associativy Frontend Engines.
 Features:
     Associativy.Frontends.Administration:
