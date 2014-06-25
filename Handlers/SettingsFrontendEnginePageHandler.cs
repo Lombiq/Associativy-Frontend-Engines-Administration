@@ -2,29 +2,28 @@
 using Associativy.Frontends.Models;
 using Associativy.Services;
 using Orchard.ContentManagement;
+using Orchard.ContentManagement.Handlers;
 using Piedone.HelpfulLibraries.Contents.DynamicPages;
 
-namespace Associativy.Frontends.Administration.EventHandlers
+namespace Associativy.Frontends.Administration.Handlers
 {
-    public class SettingsFrontendEngineEventHandler : IPageEventHandler
+    public class SettingsFrontendEnginePageHandler : ContentHandler
     {
         private readonly IGraphSettingsService _settingsService;
         private readonly IGraphCacheService _cacheService;
 
 
-        public SettingsFrontendEngineEventHandler(IGraphSettingsService settingsService, IGraphCacheService cacheService)
+        public SettingsFrontendEnginePageHandler(IGraphSettingsService settingsService, IGraphCacheService cacheService)
         {
             _settingsService = settingsService;
             _cacheService = cacheService;
         }
 
 
-        public void OnPageInitializing(PageContext pageContext)
+        protected override void Initializing(InitializingContentContext context)
         {
-        }
+            var pageContext = context.PageContext();
 
-        public void OnPageInitialized(PageContext pageContext)
-        {
             if (pageContext.Group != FrontendsPageConfigs.Group) return;
 
             var config = pageContext.Page.As<IEngineConfigurationAspect>();
@@ -35,14 +34,6 @@ namespace Associativy.Frontends.Administration.EventHandlers
             config.GraphSettings.InitialZoomLevel = settings.InitialZoomLevel;
             config.GraphSettings.ZoomLevelCount = settings.ZoomLevelCount;
             config.GraphSettings.MaxConnectionCount = settings.MaxConnectionCount;
-        }
-
-        public void OnPageBuilt(PageContext pageContext)
-        {
-        }
-
-        public void OnAuthorization(PageAutorizationContext authorizationContext)
-        {
         }
     }
 }

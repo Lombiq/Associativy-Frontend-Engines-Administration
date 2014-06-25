@@ -108,16 +108,14 @@
       <Name>Piedone.HelpfulLibraries</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Drivers\Pages\Admin\AssociativyManageGraphAuthorizationPartDiver.cs" />
     <Compile Include="Drivers\Pages\Admin\AssociativyManageGraphFrontendsPartDriver.cs" />
-    <Compile Include="EventHandlers\AuthorizationAdminEventHandler.cs" />
-    <Compile Include="EventHandlers\AuthorizationFrontendEngineEventHandler.cs" />
-    <Compile Include="EventHandlers\FrontendsAdminEventHandler.cs" />
-    <Compile Include="EventHandlers\SettingsFrontendEngineEventHandler.cs" />
+    <Compile Include="Handlers\AuthorizationAdminPageHandler.cs" />
+    <Compile Include="Handlers\AuthorizationFrontendEnginePageHandler.cs" />
+    <Compile Include="Handlers\FrontendsAdminPageHandler.cs" />
+    <Compile Include="Handlers\SettingsFrontendEnginePageHandler.cs" />
     <Compile Include="Models\FrontendAuthorizationSettings.cs" />
     <Compile Include="Models\GraphSettings.cs" />
     <Compile Include="Models\Pages\Admin\AssociativyManageGraphAuthorizationPart.cs" />
