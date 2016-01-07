@@ -1,10 +1,10 @@
-﻿@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphAuthorizationPart
+@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphAuthorizationPart
 
 <div id="associativy-administration-authorization-container">
     <fieldset>
         <legend>@T("Users authorized to view the graph")</legend>
         <ol>
-            <li><span class="hint">@T("Only users having the selected roles will be able to view the graph through frontend engines:")</span>
+            <li>@Html.Hint(T("Only users having the selected roles will be able to view the graph through frontend engines:"))
                 <ul>
                     @for (int i = 0; i < Model.Roles.Count; i++)
                     {

@@ -1,4 +1,4 @@
-﻿@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphFrontendsPart
+@model Associativy.Frontends.Administration.Models.Pages.Admin.AssociativyManageGraphFrontendsPart
 
 <div id="associativy-administration-graph-frontends-settings-container">
         <fieldset>
@@ -11,22 +11,22 @@
                 <li>
                     @Html.LabelFor(m => m.GraphSettings.InitialZoomLevel, T("Initial zoom level"))
                     @Html.TextBoxFor(m => m.GraphSettings.InitialZoomLevel, new { @class = "text small" })
-                    <span class="hint">@T("The zoom level the graph is initially displayed on (should be zoom level count - 1).")</span>
+                    @Html.Hint(T("The zoom level the graph is initially displayed on (should be zoom level count - 1)."))
                 </li>
                 <li>
                     @Html.LabelFor(m => m.GraphSettings.ZoomLevelCount, T("Zoom level count"))
                     @Html.TextBoxFor(m => m.GraphSettings.ZoomLevelCount, new { @class = "text small" })
-                    <span class="hint">@T("The number of zoom levels for the graph.")</span>
+                    @Html.Hint(T("The number of zoom levels for the graph."))
                 </li>
                 <li>
                     @Html.LabelFor(m => m.GraphSettings.MaxDistance, T("Maximal distance"))
                     @Html.TextBoxFor(m => m.GraphSettings.MaxDistance, new { @class = "text small" })
-                    <span class="hint">@T("Maximal distance (in hops) between two nodes that should be considered in an associativy connection.")</span>
+                    @Html.Hint(T("Maximal distance (in hops) between two nodes that should be considered in an associativy connection."))
                 </li>
                 <li>
                     @Html.LabelFor(m => m.GraphSettings.MaxConnectionCount, T("Maximal connection count"))
                     @Html.TextBoxFor(m => m.GraphSettings.MaxConnectionCount, new { @class = "text small" })
-                    <span class="hint">@T("Maximal number of connections displayed from the graph. Keep in mind that since only nodes with at least one neighbour are displayed this means that the maximal amount of displayed nodes is twice the connection count.")</span>
+                    @Html.Hint(T("Maximal number of connections displayed from the graph. Keep in mind that since only nodes with at least one neighbour are displayed this means that the maximal amount of displayed nodes is twice the connection count."))
                 </li>
             </ol>
         </fieldset>
