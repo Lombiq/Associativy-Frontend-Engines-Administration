@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Associativy.Frontends.EngineDiscovery;
 using Orchard.ContentManagement;
-using Orchard.Core.Common.Utilities;
+using Orchard.ContentManagement.Utilities;
 
 namespace Associativy.Frontends.Administration.Models.Pages.Admin
 {
